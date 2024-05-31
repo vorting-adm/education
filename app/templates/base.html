@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}MyTitle{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='style/style.css')}}" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
+  </head>
+  <body>
+    <div class="bumble-door">
+      <div class="bumble-door-left">
+        <nav class="menu">
+          <div class="signin">
+            <div class="content">
+              <h2>Вход</h2>
+              <div class="form" action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <div class="inputBox">
+                  {{ form.username(size=32) }} <i>{{ form.username.label }}</i>
+                </div>
+                <div class="inputBox">
+                  {{ form.password(size=32) }} <i>{{ form.password.label }}</i>
+                </div>
+                <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+                <div class="links">
+                  <a href="#">Забыл пароль?</a>
+                  <a href="#" onclick="viewRegForm()">Зарегистрироваться</a>
+                </div>
+                <div class="inputBox">
+                  {{ form.submit() }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="register">
+          <div class="signin">
+            <div class="content">
+              <h2>Регистрация</h2>
+              <div class="form">
+                <div class="inputBox">
+                  <input type="text" required /> <i>Имя</i>
+                </div>
+                <div class="inputBox">
+                  <input type="text" required /> <i>Почта</i>
+                </div>
+                <div class="inputBox">
+                  <input type="password" required /> <i>Пароль</i>
+                </div>
+                <div class="inputBox">
+                  <input type="password" required /> <i>Повтор пароля</i>
+                </div>
+                <div class="links">
+                  Уже зарегистрированы? <a href="#" onclick="viewAuthForm()">Войти</a>
+                  <!-- <a href="#">Зарегистрироваться</a> -->
+                </div>
+                <div class="inputBox">
+                  <input type="submit" value="Зарегистрироваться" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bumble-door-right">
+        <div class="cl-btn">
+          <div class="cl-btn-in">
+            <div class="cl-btn-txt" onclick="openDoor()">Закрыть</div>
+          </div>
+        </div>
+      <div class="page-info">
+        <div class="info">
+          <h2>Справка</h2>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <button class="btn-auth" onclick="closeDoor()">Войти</button>
+
+    {% block content %} {% endblock %}
+  </body>
+  <script src="{{url_for('static', filename='/javascript//javascript.js')}}"></script>
+</html>

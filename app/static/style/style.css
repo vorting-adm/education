@@ -1,0 +1,397 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  background: url("/static/images//terminal.gif") no-repeat 0px 0px;
+  background-size: cover;
+  color: #606468;
+  font: 87.5%/1.5em "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.display-none{
+  display: none;
+}
+
+/* Шторки */
+
+.bumble-door-left {
+  background: black;
+  position: fixed;
+  left: -50vw;
+  width: 50vw;
+  height: 100vh;
+  z-index: 2000;
+}
+
+.bumble-door-right {
+  background: black;
+  position: fixed;
+  left: 100vw;
+  width: 50vw;
+  height: 100vh;
+  z-index: 2000;
+}
+
+.close-door-left{
+  transform: translate(50vw,0);
+  transition: transform 1s;
+}
+
+.close-door-right{
+  transform: translate(-50vw,0);
+  transition: transform 1s;
+}
+
+.open-door-left{
+  transform: translate(-50vw,0);
+  transition: transform 1s;
+  transition-delay: 1s;
+}
+
+.open-door-right{
+  transform: translate(50vw,0);
+  transition: transform 1s;
+  transition-delay: 1s;
+}
+
+/* конец штор */
+
+/* розовая кнопка */
+.btn-auth {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #ea4c88;
+  color: #eee;
+  font-weight: bold;
+  margin-bottom: 2em;
+  text-transform: uppercase;
+  width: 280px;
+  height: 60px;
+  margin: 40vh 40vw;
+}
+
+.btn-auth:hover {
+  background-color: #d44179;
+}
+/* конец кнопки */
+
+
+/* меню в шторке */
+.menu {
+  display: flex;
+  position: fixed;
+  top: -100vh;
+  background: #d44179;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+}
+
+.view-menu{
+  transform: translate(0,100vh);
+  transition: transform 2s;
+  transition-delay: 1s;
+}
+
+.hide-menu{
+  transform: translate(0,-100vh);
+  transition: transform 2s;
+  
+}
+
+/* конец меню  */
+
+/* форма регистрации */
+.register {
+  display: flex;
+  position: fixed;
+  top: -100vh;
+  background: #f0de7b;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+}
+
+.view-reg{
+  transform: translate(0,100vh);
+  transition: transform 2s;
+  transition-delay: 1s;
+}
+
+.hide-reg{
+  transform: translate(0,-100vh);
+  transition: transform 2s;
+  
+}
+
+.register .signin
+{
+  position: absolute;
+  width: 400px;
+  background: #222;  
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+.register .signin .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.register .signin .content h2 
+{
+  font-size: 2em;
+  color: #337AB7;
+  text-transform: uppercase;
+}
+.register .signin .content .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.register .signin .content .form .inputBox
+{
+  position: relative;
+  width: 100%;
+}
+.register .signin .content .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+.register .signin .content .form .inputBox i 
+{
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+/* конец формы регистрации */
+
+/* info menu */
+.page-info{
+  display: flex;
+  position: fixed;
+  top: -100vh;
+  background: #84f089;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+}
+
+.view-info{
+  transform: translate(0,100vh);
+  transition: transform 2s;
+  transition-delay: 2s;
+}
+
+.hide-info{
+  transform: translate(0,-100vh);
+  transition: transform 2s;
+  
+}
+
+.info{
+  border: solid 2px;
+  width: 35vw;
+  height: 75vh;
+}
+/* end info */
+
+/* form auter */
+
+.menu .signin
+{
+  position: absolute;
+  width: 400px;
+  background: #222;  
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+.menu .signin .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.menu .signin .content h2 
+{
+  font-size: 2em;
+  color: #337AB7;
+  text-transform: uppercase;
+}
+.menu .signin .content .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.menu .signin .content .form .inputBox
+{
+  position: relative;
+  width: 100%;
+}
+.menu .signin .content .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+.menu .signin .content .form .inputBox i 
+{
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i
+{
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+.signin .content .form .links 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.signin .content .form .links a 
+{
+  color: #fff;
+  text-decoration: none;
+}
+.signin .content .form .links a:nth-child(2)
+{
+  color: #337AB7;
+  font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"]
+{
+  padding: 10px;
+  background: #337AB7;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+/* конец формы авторизациии */
+
+
+/* close button */
+
+.cl-btn {
+  position: absolute;
+  right: 2vw;
+  margin: 20px auto;
+  width: 70px;
+  cursor: pointer;
+  z-index: 2000;
+}
+.cl-btn-in {
+  width: inherit;
+  text-align: center;
+}
+.cl-btn-txt { 
+  font-size: 13px; 
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #337AB7;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+  font-family: Verdana;
+}
+.cl-btn-in:before, .cl-btn-in:after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: inherit;
+  background: #337AB7;
+  left: 0;
+  transition: all .3s ease-in;
+}
+.cl-btn-in:before {
+  top: calc(50% - 4px); 
+  transform: rotate(45deg);  
+}
+.cl-btn-in:after {  
+  bottom: 50%;
+  transform: rotate(-45deg);  
+}
+.cl-btn:hover .cl-btn-txt {
+  opacity: 1;
+}
+.cl-btn:hover .cl-btn-in:before,
+.cl-btn:hover .cl-btn-in:after {
+  transform: rotate(0);
+}
+.cl-btn:hover .cl-btn-in:before {
+  top: 0;
+}
+.cl-btn:hover .cl-btn-in:after {
+  bottom: 0;
+}
+
+/* конец кнопки закрытия */

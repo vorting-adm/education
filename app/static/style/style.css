@@ -21,7 +21,7 @@ body {
 /* Шторки */
 
 .bumble-door-left {
-  background: black;
+  background: url("/static/images//lift_p.png") no-repeat 0px 0px;
   position: fixed;
   left: -50vw;
   width: 50vw;
@@ -30,7 +30,7 @@ body {
 }
 
 .bumble-door-right {
-  background: black;
+  background: url("/static/images//right_p.png") no-repeat 0px 0px;
   position: fixed;
   left: 100vw;
   width: 50vw;
@@ -88,7 +88,7 @@ body {
   display: flex;
   position: fixed;
   top: -100vh;
-  background: #d44179;
+  background: transparent;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -137,7 +137,7 @@ body {
 {
   position: absolute;
   width: 400px;
-  background: #222;  
+  background: #222;
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -205,7 +205,7 @@ body {
   display: flex;
   position: fixed;
   top: -100vh;
-  background: #84f089;
+  background: transparent;
   justify-content: center;
   align-items: center;
   height: 100vh;

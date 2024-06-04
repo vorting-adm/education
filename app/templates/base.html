@@ -10,10 +10,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
   </head>
-  <body>
+  <body><div class="door"></div>
     <div class="bumble-door">
+
       <div class="bumble-door-left">
-        <nav class="menu">
+
+           <nav class="menu">
           <div class="signin">
             <div class="content">
               <h2>Вход</h2>
@@ -37,6 +39,7 @@
             </div>
           </div>
         </nav>
+
         <div class="register">
           <div class="signin">
             <div class="content">
@@ -69,17 +72,36 @@
       <div class="bumble-door-right">
         <div class="cl-btn">
           <div class="cl-btn-in">
-            <div class="cl-btn-txt" onclick="openDoor()">Закрыть</div>
+            <div class="cl-btn-txt" onclick="openDoor();typing_text();">Закрыть</div>
           </div>
         </div>
       <div class="page-info">
-        <div class="info">
-          <h2>Справка</h2>
-        </div>
+        <div class="info" >
+
+          <div class="screen">
+Ядро
+Могучий Linux («не оставляй нас, монолит!»). Ядро операционной системы, созданное, чтобы работать с POSIX-совместимыми окружениями. Обычно лежит в /boot/ и содержит в названии слово vmlinuz, где «vm» напоминает нам о поддержке виртуальной памяти, а «z» указывает, что файл сжат.
+
+В рамках одного дистрибутива может поддерживаться несколько вариантов ядра, например:
+
+mainline («основное»);
+
+LTS (с расширенной поддержкой);
+
+rt (патченное для поддержки исполнения в режиме реального времени);
+
+с различными патчами для повышения производительности или защищённости (zen, hardened etc);
+
+libre (почищенное от проприетарных блобов ядро, ожидаемо поддерживающее мало оборудования).
+
+совсем экзотичные варианты с не-Linux ядром типа Debian GNU/Hurd (с ядром GNU Hurd) и Debian GNU/kFreeBSD (с ядром FreeBSD соответственно). Это уже, конечно, не GNU/Linux.
+
+          </div>
+
       </div>
       </div>
     </div>
-
+</div>
     <button class="btn-auth" onclick="closeDoor()">Войти</button>
 
     {% block content %} {% endblock %}

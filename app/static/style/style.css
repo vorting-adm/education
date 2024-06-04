@@ -19,9 +19,37 @@ body {
 }
 
 /* Шторки */
+.door {
+    background: url("/static/images//door.jpg") no-repeat 0px -0px;
+    background-size:cover;
+    display: flex;
+  position: fixed;
+  top: -100vh;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+
+}
+.close-door{
+  transform: translate(0, 51vw);
+  transition: transform 2s;
+  transition-delay: 1s;
+}
+
+.open-door{
+  transform: translate(0,-51vw);
+  transition: transform 1s;
+
+}
+
+
 
 .bumble-door-left {
-  background: url("/static/images//lift_p.png") no-repeat 0px 0px;
+  background: url("/static/images//left.png") no-repeat 0px 0px;
+  background-size:cover;    
   position: fixed;
   left: -50vw;
   width: 50vw;
@@ -30,7 +58,8 @@ body {
 }
 
 .bumble-door-right {
-  background: url("/static/images//right_p.png") no-repeat 0px 0px;
+  background: url("/static/images//right.png") no-repeat 0px 0px;
+  background-size:cover;
   position: fixed;
   left: 100vw;
   width: 50vw;
@@ -40,23 +69,23 @@ body {
 
 .close-door-left{
   transform: translate(50vw,0);
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 
 .close-door-right{
   transform: translate(-50vw,0);
-  transition: transform 1s;
+  transition: transform 1.5s;
 }
 
 .open-door-left{
   transform: translate(-50vw,0);
-  transition: transform 1s;
+  transition: transform 2s;
   transition-delay: 1s;
 }
 
 .open-door-right{
   transform: translate(50vw,0);
-  transition: transform 1s;
+  transition: transform 2s;
   transition-delay: 1s;
 }
 
@@ -88,7 +117,7 @@ body {
   display: flex;
   position: fixed;
   top: -100vh;
-  background: transparent;
+  background: url("/static/images//test1.png") no-repeat 0px 0px;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -97,7 +126,7 @@ body {
 
 .view-menu{
   transform: translate(0,100vh);
-  transition: transform 2s;
+  transition: transform 4s;
   transition-delay: 1s;
 }
 
@@ -206,6 +235,7 @@ body {
   position: fixed;
   top: -100vh;
   background: transparent;
+
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -225,9 +255,10 @@ body {
 }
 
 .info{
-  border: solid 2px;
-  width: 35vw;
-  height: 75vh;
+    background: url("/static/images//test2.png") no-repeat 0px 0px;
+  border: solid 2px solid;
+  width: 22vw;
+  height: 80vh;
 }
 /* end info */
 
@@ -395,3 +426,47 @@ input[type="submit"]:active
 }
 
 /* конец кнопки закрытия */
+
+
+
+.screen {
+    max-width: 430px;
+    max-height: 650px;
+    font: 16px/140% 'Courier New', Courier, Arial;
+    margin: 60px 50px 50px 50px;
+    background: #0000003B;
+    color: lime;
+    white-space: pre-wrap;
+}
+.screen span {
+    visibility: hidden;
+
+}
+.screen span.visible {
+    visibility: visible;
+}
+.screen span.cursor {
+    background: lime;
+    animation: blinking 0.5s step-start infinite;
+}
+
+@keyframes blinking {
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

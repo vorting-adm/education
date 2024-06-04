@@ -7,6 +7,9 @@ function closeDoor(){
 	document.querySelector('.menu').classList.add('view-menu')
 	document.querySelector('.page-info').classList.remove('hide-info')
 	document.querySelector('.page-info').classList.add('view-info')
+
+    document.querySelector('.door').classList.remove('open-door')
+	document.querySelector('.door').classList.add('close-door')
 }
 
 function openDoor(){
@@ -20,6 +23,9 @@ function openDoor(){
 	document.querySelector('.bumble-door-left').classList.add('open-door-left')
 	document.querySelector('.bumble-door-right').classList.remove('close-door-right')
 	document.querySelector('.bumble-door-right').classList.add('open-door-right')
+
+	document.querySelector('.door').classList.remove('close-door')
+	document.querySelector('.door').classList.add('open-door')
 
 }
 
@@ -38,3 +44,36 @@ function viewAuthForm(){
 	document.querySelector('.register').classList.remove('view-reg')
 	
 }
+
+let textBox = document.querySelector('.screen'),
+    text    = textBox.innerText,
+    newHTML = '';
+
+for(i = 0; i < text.length; i++){
+    newHTML += '<span>'+text[i]+'<span>';
+}
+textBox.innerHTML = newHTML;
+
+let spans   = textBox.querySelectorAll('span'),
+    count   = 0,
+    timeout = 0;
+
+function typing_text(){
+    spans[count].classList.add('visible');
+    if(spans[count].innerText == ' ' || spans[count].innerHTML == ' '){
+        timeout = Math.floor(Math.random() * Math.floor(1000));
+        spans[count].classList.add('cursor');
+    }else{
+        timeout = 50;
+    }
+
+    if (count < text.length - 1){
+        setTimeout(() => {
+            spans[count].classList.remove('cursor');
+            count ++;
+            typing_text();
+        }, timeout);
+    }
+}
+
+typing_text();

@@ -438,35 +438,19 @@ input[type="submit"]:active
     color: lime;
     white-space: pre-wrap;
 }
-.screen span {
-    visibility: hidden;
 
-}
-.screen span.visible {
-    visibility: visible;
-}
-.screen span.cursor {
-    background: lime;
-    animation: blinking 0.5s step-start infinite;
-}
-
-@keyframes blinking {
-    50% {opacity: 1;}
-    100% {opacity: 0;}
+.text {
+  margin: 0;
+  float: left;
 }
 
 
+.cursor {
+  background: lime;
+  animation:  blink .6s infinite;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes blink{
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
